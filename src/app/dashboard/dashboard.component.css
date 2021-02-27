@@ -3,11 +3,6 @@
  	margin:auto;
  }
 
-.block {
-  padding: 25px;
-	background-color:#00FF7F;
-}
-
 .line {
 	padding: 30px 25px;
   background-color:#181818;
@@ -39,9 +34,18 @@
   background-image: url('../../assets/images/videos.png');
 }
 
+.cl1 {
+  display:flex;
+  line-height: 500px;
+  padding: 50px 25px;
+  background: #FF6336
+}
+
 .articles {
   display: flex;
   flex-wrap: wrap;
+  padding: 50px 25px;
+  background: #FFA336
 }
 
 .article {
@@ -59,19 +63,12 @@
 }
 
 .clips {
-  display: flex;
-  justify-content: space-between;
+  padding: 25px;
+  background: #DE2F70
 }
 
-.newsweek{
+.weeknews {
   font-size: 30px;
-  color:#008000;
   padding: 0px 200px;
   font-weight: 600;
-
-}
-
-.cl1{
-  display:flex;
-  line-height: 500px;
 }

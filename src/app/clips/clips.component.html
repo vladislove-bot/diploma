@@ -1,1 +1,12 @@
-<p>clips works!</p>
+<div *ngFor="let genre of genres">
+  <div class="line videos">
+    <span>{{ genre.name }}</span>
+  </div>
+  <div class="clips">
+    <p-carousel [value]="getClipsByCategory(genre.name)" [numVisible]="5" [numScroll]="1">
+      <ng-template let-clip pTemplate="item">
+        <iframe [src]="clip.url" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </ng-template>
+    </p-carousel>
+  </div>
+</div>

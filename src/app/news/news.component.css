@@ -1,0 +1,21 @@
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 25px;
+  min-height: 100vh;
+  background: #FFA336
+}
+
+.article {
+  width: 23%;
+  margin: 0 1%;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 17px;
+}

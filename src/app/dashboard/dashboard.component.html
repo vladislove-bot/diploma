@@ -1,8 +1,8 @@
 <div class="container">
   <div class="content">
-    <div class="block cl1">
-      <div class="newsweek"><span>Новинки этой недели</span></div>
-      <p-galleria [value]="data" [showThumbnails]="false" [autoPlay]="true" [circular]="true" [transitionInterval]="2000">
+    <div class="cl1">
+      <div class="weeknews"><span>Новинки этой недели</span></div>
+      <p-galleria [value]="data" [showThumbnails]="false" [autoPlay]="true" [circular]="true" [transitionInterval]="2500">
         <ng-template pTemplate="item" let-item>
           <img width="500" [src]="item.previewImageSrc" [alt]="item.alt" />
         </ng-template>
@@ -11,23 +11,21 @@
     <div class="line news">
       <span>Новости в музыкальной индустрии</span>
     </div>
-    <div class="block">
-      <div class="articles">
-        <div class="article" *ngFor="let article of articles">
-          <span class="title">{{ article.title }}</span>
-          <p class="description">{{ article.description }}</p>
-        </div>
+    <div class="articles">
+      <div class="article" *ngFor="let article of articles">
+        <span class="title">{{ article.title }}</span>
+        <p class="description">{{ article.description }}</p>
       </div>
     </div>
     <div class="line videos">
       <span>Популярные клипы</span>
     </div>
-    <div class="block">
-      <div class="clips">
-        <div class="clip" *ngFor="let clip of clips">
+    <div class="clips">
+      <p-carousel [value]="clips" [numVisible]="5" [numScroll]="1" [circular]="true">
+        <ng-template let-clip pTemplate="item">
           <iframe [src]="clip.url" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </div>
+        </ng-template>
+      </p-carousel>
     </div>
   </div>
 </div>

@@ -1,1 +1,6 @@
-<p>news works!</p>
+<div class="articles">
+  <div class="article" *ngFor="let article of articles">
+    <span class="title">{{ article.title }}</span>
+    <p class="description">{{ article.description }}</p>
+  </div>
+</div>

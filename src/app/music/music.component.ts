@@ -1,4 +1,6 @@
+import { ClipService } from './../shared/clip.service';
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-music',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MusicComponent implements OnInit {
 
+
+
   constructor() { }
 
   ngOnInit(): void {
-  }
 
+  }
 }

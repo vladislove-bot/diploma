@@ -39,7 +39,7 @@ export class DashboardComponent implements OnInit {
   }
 
   getClips() {
-    this.clipsService.getClips()
+    this.clipsService.getClips(10)
     .subscribe((res: any) => {
       this.clips = res;
       this.clips.forEach(element => {
@@ -49,7 +49,7 @@ export class DashboardComponent implements OnInit {
   }
 
   getNews() {
-    this.newsService.getNews()
+    this.newsService.getNews(8)
     .subscribe((res: any) => {
       this.articles = res;
     });
